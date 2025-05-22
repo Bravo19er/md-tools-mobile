@@ -2,32 +2,25 @@
 
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4?style=flat)](https://github.com/sponsors/Bravo19er)
 
-Mobile-friendly markdown templates and freelance tools...
+Clean, mobile-friendly Markdown templates built for freelancers, consultants, and independent creators.
 
-Whether you're documenting a project, writing a client proposal, or tracking your finances, this toolkit gives you ready-to-use Markdown files that work well from your phone or browser.
+This toolkit is practical and sponsor-supported, with a focus on real-world use. Whether you’re documenting a project, writing proposals, or tracking finances, these files are ready to drop into your workflow.
 
-## What's Inside
+All templates are designed to function seamlessly from a phone or browser, with no bloated features or setup required.
 
-- **templates/**
-  - `readme-clean.md` — professional README format
-  - `proposal-brief.md` — freelance-style service proposal
-  - `changelog-logical.md` — version history log
-  - `system-design-lean.md` — quick architecture write-up
+## What's Included
 
-- **resources/**
-  - `freelance-pricing-table.md` — hourly or project pricing calculator
-  - `personal-finance-tracker.md` — track budgets and goals in plain text
+- `readme-clean.md` — professional README format  
+- `freelance-pricing-table.md` — simple hourly rate table  
+- `personal-finance-tracker.md` — income and expense tracker  
+- `changelog-logical.md` — versioned update log  
+- `system-design-lean.md` — lightweight technical planning page  
 
-## Why Sponsor?
+## License
 
-If this saves you time or helps you earn, consider [sponsoring me](https://github.com/sponsors/Bravo19er). It helps keep this toolkit free, updated, and expanding.
+MIT License. Open for personal or commercial use.
 
-## Quick Start
+## Sponsor
 
-1. Open the `/templates` or `/resources` folder
-2. Copy any `.md` file into your own project or repo
-3. Customize as needed — it’s all editable directly from GitHub or Replit
-
----
-
+If you find this useful, consider [sponsoring on GitHub](https://github.com/sponsors/Bravo19er).
 **License:** MIT
