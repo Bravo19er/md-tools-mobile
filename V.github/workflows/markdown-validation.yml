@@ -1,0 +1,30 @@
+name: Daily Markdown Validation
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Runs daily at 9:00 AM UTC
+
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Markdown Linter
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            **/*.md
+
+      - name: Notify on Failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '⚠️ Markdown Validation Failed',
+              body: 'Automatic daily markdown validation detected issues. Please check your files.'
+            })
