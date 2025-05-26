@@ -3,6 +3,7 @@ name: Daily Markdown Validation
 on:
   schedule:
     - cron: '0 9 * * *'  # Runs daily at 9:00 AM UTC
+  workflow_dispatch:     # Allows manual runs
 
 jobs:
   markdownlint:
