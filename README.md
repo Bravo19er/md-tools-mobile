@@ -1,12 +1,17 @@
 # MD Tools Mobile
 
-[![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4?style=flat)](https://github.com/sponsors/Bravo19er)
+[![Sponsor](https://img.shields.io/badge/sponsor-❤️-
+ff69b4?style=flat)](https://github.com/sponsors/Bravo19er)
 
-Clean, mobile-friendly Markdown templates built for freelancers, consultants, and independent creators.
+Clean, mobile-friendly Markdown templates built for freelancers, consultants, 
+and independent creators.
 
-This toolkit is practical and sponsor-supported, with a focus on real-world use. Whether you’re documenting a project, writing proposals, or tracking finances, these files are ready to drop into your workflow.
+This toolkit is practical and sponsor-supported, with a focus on real-world 
+use. Whether you’re documenting a project, writing proposals, or tracking 
+finances, these files are ready to drop into your workflow.
 
-All templates are designed to function seamlessly from a phone or browser, with no bloated features or setup required.
+All templates are designed to function seamlessly from a phone or browser, 
+with no bloated features or setup required.
 
 ## What's Included
 
