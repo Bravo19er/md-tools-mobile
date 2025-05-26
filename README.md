@@ -1,7 +1,6 @@
 # MD Tools Mobile
 
-[![Sponsor](https://img.shields.io/badge/sponsor-❤️-
-ff69b4?style=flat)](https://github.com/sponsors/Bravo19er)
+[![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4?style=flat)](https://github.com/sponsors/Bravo19er)
 
 Clean, mobile-friendly Markdown templates built for freelancers, consultants, 
 and independent creators.
