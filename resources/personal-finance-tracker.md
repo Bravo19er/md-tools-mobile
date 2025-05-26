@@ -1,6 +1,6 @@
 # Personal Finance Tracker
 
-Track your income, expenses, and savings in plain Markdown. 
+Track your income, expenses, and savings in plain Markdown.
 Easy to manage from your phone.
 
 ## Income
