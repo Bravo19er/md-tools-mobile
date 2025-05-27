@@ -61,8 +61,8 @@ MIT License. Open for personal or commercial use.
 
 ## Sponsor
 
-If you find this useful, consider [sponsoring on GitHub]
-(https://github.com/sponsors/Bravo19er).
+If you find this useful, consider
+[sponsoring on GitHub](https://github.com/sponsors/Bravo19er).
 
 ---
 
