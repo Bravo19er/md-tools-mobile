@@ -5,6 +5,8 @@
 Clean, mobile-friendly Markdown templates built for freelancers, consultants,
 and independent creators.
 
+**🚀 New! [Google Workspace Automation Starter Pack](./workspace-automation-starter-pack.md)**
+
 This toolkit is practical and sponsor-supported, with a focus on real-world use.
 Whether you’re documenting a project, writing proposals, or tracking finances,
 these files are ready to drop into your workflow.
