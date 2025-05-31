@@ -43,7 +43,7 @@ function sendBulkEmails() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Emails");
   var data = sheet.getDataRange().getValues();
   for (var i = 1; i < data.length; i++) {
-    MailApp.sendEmail(data[i][0], data[i][1], data[i][2]);
+    MailApp.sendEmail(data[i][0],
+data[i][1], data[i][2]);
   }
-
 }
