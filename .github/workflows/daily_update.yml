@@ -2,46 +2,35 @@ name: Daily Automated Update
 
 on:
   schedule:
-    - cron: '0 9 * * *' # Runs every day at 9am UTC
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    - cron: '0 7 * * *' # Runs every day at 7:00 UTC
+  workflow_dispatch:    # Allows manual trigger from GitHub UI
 
 jobs:
   new_update:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up date
+      - name: Set up date variable
         id: date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Create new update post
         run: |
-          FOLDER="updates"
-          FILE="$FOLDER/${DATE}-daily-update.md"
-          mkdir -p "$FOLDER"
-          if [ ! -f "$FILE" ]; then
-            echo "---" > $FILE
-            echo "title: \"Automated Update: $DATE\"" >> $FILE
-            echo "date: $DATE" >> $FILE
-            echo "categories: [automation, update]" >> $FILE
-            echo "---" >> $FILE
-            echo "" >> $FILE
-            echo "This is an automated daily update. What did I
-            automate today?" >> $FILE
-          fi
+          mkdir -p updates
+          echo "# Daily Automated Update - $DATE" > updates/${DATE}-daily-update.md
+          echo "" >> updates/${DATE}-daily-update.md
+          echo "This is your automated update for $DATE." >> updates/${DATE}-daily-update.md
 
       - name: Commit post
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add updates/
-          git commit -m "Add automated update for $DATE" || echo
-          "Nothing to commit"
+          git commit -m "Add automated update for $DATE" || echo "No changes to commit."
           git push
         env:
+          DATE: ${{ env.DATE }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
