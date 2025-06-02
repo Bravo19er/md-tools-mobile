@@ -1,0 +1,73 @@
+# Automation Tip Of The Day
+
+Keep all Markdown table columns aligned using pipes for better
+readability. Consistent formatting helps collaborators scan and
+update your docs easily.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Automate repetitive tasks in Google Sheets using Apps Script.
+Custom scripts can send daily summaries or automate reminders
+for your team.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Use the proposal template in this repo to save time on client quotes.
+A reusable template helps maintain accuracy and a professional appearance.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Update your changelog file after each project milestone.
+Clear records help track progress and simplify handoffs to clients or partners.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Automate status updates by connecting Google Forms to Sheets with triggers.
+This reduces manual work and keeps your records accurate in real time.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Use markdown task lists to track daily actions:
+- [ ] Review proposals
+- [ ] Update changelog
+- [ ] Plan tomorrow's work
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Use consistent file naming conventions for templates and logs.
+This helps you find documents quickly and avoids confusion across your projects.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Regularly review permissions in Google Workspace.
+Remove access for users who no longer need it to keep data secure.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Create a kickoff checklist for new projects. Include steps for onboarding,
+access, communication, and documentation to ensure a smooth start.
+
+Support the project and receive daily tips customized for your workflow.
+---
+# Automation Tip Of The Day
+
+Test new automations with sample data before using them in production.
+Early testing catches issues and builds confidence in your workflow.
+
+Support the project and receive daily tips customized for your workflow.
