@@ -5,6 +5,9 @@ on:
     - cron: '0 9 * * *' # Runs every day at 9am UTC
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   new_update:
     runs-on: ubuntu-latest
@@ -28,7 +31,8 @@ jobs:
             echo "categories: [automation, update]" >> $FILE
             echo "---" >> $FILE
             echo "" >> $FILE
-            echo "This is an automated daily update. What did I automate today?" >> $FILE
+            echo "This is an automated daily update. What did I
+            automate today?" >> $FILE
           fi
 
       - name: Commit post
@@ -36,7 +40,8 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add updates/
-          git commit -m "Add automated update for $DATE" || echo "Nothing to commit"
+          git commit -m "Add automated update for $DATE" || echo
+          "Nothing to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
