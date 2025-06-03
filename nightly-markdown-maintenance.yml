@@ -1,0 +1,39 @@
+name: Nightly Markdown Maintenance
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # every day at midnight UTC
+
+jobs:
+  nightly-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Prettier and markdownlint-cli2
+        run: |
+          npm install --global prettier
+          npm install -g markdownlint-cli2
+
+      - name: Run Prettier (auto-fix Markdown)
+        run: prettier --write "**/*.md"
+
+      - name: Run markdownlint-cli2 with --fix
+        run: markdownlint-cli2-fix "**/*.md"
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "github-actions"
+          git add "**/*.md"
+          git diff --cached --quiet || git commit -m "Nightly auto-fix: Prettier and markdownlint"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
