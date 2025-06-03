@@ -1,40 +1,39 @@
-name: Daily Automation Tip
+name: Daily Automated Update
 
 on:
   schedule:
-    - cron: '0 7 * * *'
+    - cron: '0 13 * * *' # Runs daily at 9AM Eastern (adjust as needed)
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  new_tip:
+  new_update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up date variable
+      - name: Set up date
         id: date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - name: Rotate and create automation tip
+      - name: Create new update post
         run: |
           mkdir -p automation-tips
-          TOTAL=$(grep -c '^# Automation Tip Of The Day' automation-tips.txt)
-          IDX=$(( ($(date +%j) - 1) % TOTAL + 1 ))
-          awk -v idx="$IDX" 'BEGIN{RS="---"} NR==idx{print $0 > "automation-tips/" ENVIRON["DATE"] "-automation-tip.md"}' automation-tips.txt
+          echo "# Automation Tip Of The Day
+
+Use the proposal template in this repo to save time on client quotes.
+A reusable template helps maintain accuracy and a professional appearance.
+
+Support the project and receive daily tips customized for your workflow.
+" > automation-tips/${{ env.DATE }}-automation-tip.md
 
       - name: Commit post
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add automation-tips/
-          git commit -m "Add automation tip for $DATE" || echo "No changes to commit."
+          git commit -m "Add automated update for ${{ env.DATE }}" || echo "Nothing to commit"
           git push
         env:
-          DATE: ${{ env.DATE }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
