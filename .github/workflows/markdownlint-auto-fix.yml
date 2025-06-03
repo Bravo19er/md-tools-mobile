@@ -1,10 +1,10 @@
 name: Markdownlint Auto-Fix
 
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    paths:
+      - '**/*.md'
 
 jobs:
   markdownlint-fix:
@@ -21,16 +21,14 @@ jobs:
       - name: Install markdownlint-cli2
         run: npm install -g markdownlint-cli2
 
-      - name: Run markdownlint-cli2 with --fix
-        run: markdownlint-cli2-fix "**/*.md"
+      - name: Lint and fix Markdown files
+        run: markdownlint-cli2 "**/*.md" --fix
 
       - name: Commit and push changes
         run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "github-actions"
-          git add "**/*.md"
-          git diff --cached --quiet || git commit -m "Auto-fix Markdown with markdownlint"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto-fix markdownlint issues" || echo "Nothing to commit"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
